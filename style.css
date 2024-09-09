@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    border: 1px solid black;
+    width: 20vw;
+}
+
+
+input[name="number_display"] {
+    width: 100%;
+    aspect-ratio: 4;
+    padding: 10px;
+    text-align: right;
+    font-size: 30px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3px;
+}
+.keypad button {
+    width: 100%;
+    aspect-ratio: 1/1;
+    font-size: 30px;
+    font-weight: 400;
+}
