@@ -14,25 +14,23 @@ body {
 .container {
     border: 1px solid black;
     width: 20vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
 }
 
-
 input[name="number_display"] {
-    width: 100%;
-    aspect-ratio: 4;
     padding: 10px;
     text-align: right;
     font-size: 30px;
+    grid-column: span 4;
 }
 
-.keypad {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 3px;
+button.operation[data-val="="] {
+    grid-row: span 4;
 }
-.keypad button {
-    width: 100%;
-    aspect-ratio: 1/1;
+
+button {
     font-size: 30px;
-    font-weight: 400;
+    padding: 10px;
 }
