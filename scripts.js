@@ -1,5 +1,4 @@
 const number_buttons = document.querySelectorAll(".number, .operation");
-
 number_buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     let value = btn.getAttribute("data-val");
@@ -40,6 +39,8 @@ function calculateTotal() {
   if (e_display.value == "") {
     return;
   } else {
-    t_display.value = eval(e_display.value);
+    const m_equation = e_display.value.replace(/×/g, "*").replace(/÷/g, "/");
+    t_display.value = eval(m_equation);
+    return;
   }
 }
