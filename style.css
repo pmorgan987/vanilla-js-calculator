@@ -13,17 +13,24 @@ body {
 
 .container {
     border: 1px solid black;
-    width: 20vw;
+    width: 30vw;
+    aspect-ratio: 1;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(7,1fr);
 }
 
-input[name="number_display"] {
+input {
     padding: 10px;
     text-align: right;
-    font-size: 30px;
     grid-column: span 4;
+    border: none;
+}
+input[name="equation_display"] {
+    font-size: 20px;
+}
+input[name="total_display"] {
+    font-size: 30px;
 }
 
 button.operation[data-val="="] {
