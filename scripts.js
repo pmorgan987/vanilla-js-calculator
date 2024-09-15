@@ -1,3 +1,5 @@
+let current_number = "";
+
 const number_buttons = document.querySelectorAll(".number, .operation");
 number_buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -20,6 +22,13 @@ function updateEquationDisplay(value, type) {
   if (type == "operation" && !Number.isInteger(Number.parseInt(lastchar))) {
     display.value = display.value.slice(0, -1) + value;
     return;
+  } else if (value == "." && current_number.includes(".")) {
+    return;
+  }
+  if (type == "number") {
+    current_number += "" + value;
+  } else {
+    current_number = "";
   }
   if (display.value == "0") {
     display.value = value;
