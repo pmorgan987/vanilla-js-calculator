@@ -1,5 +1,7 @@
+// Variable to hold the current number/operand being entered
 let current_number = "";
 
+// Listen to button clicks for numbers and operation buttons
 const number_buttons = document.querySelectorAll(".number, .operation");
 number_buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -37,11 +39,13 @@ function updateEquationDisplay(value, type) {
   }
 }
 
+// Clear the equation and total displays
 function clearDisplays() {
   document.querySelector('input[name="equation_display"]').value = "";
   document.querySelector('input[name="total_display"]').value = "";
 }
 
+// calculate the total on the equation enteredd
 function calculateTotal() {
   const e_display = document.querySelector('input[name="equation_display"]');
   const t_display = document.querySelector('input[name="total_display"]');

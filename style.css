@@ -1,5 +1,8 @@
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+html {
     margin: 0;
     padding: 0;
 }
@@ -26,9 +29,11 @@ input {
     grid-column: span 4;
     border: none;
 }
+
 input[name="equation_display"] {
     font-size: 20px;
 }
+
 input[name="total_display"] {
     font-size: 30px;
 }
